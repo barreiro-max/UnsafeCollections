@@ -6,16 +6,82 @@ import PackageDescription
 let package = Package(
     name: "UnsafeCollections",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
+        // Main Modules.
+        .library(
+            name: "UnsafeTree",
+            targets: ["UnsafeTree"]
+        ),
+        .library(
+            name: "UnsafeList",
+            targets: ["UnsafeList"]
+        ),
+        .library(
+            name: "UnsafeQueue",
+            targets: ["UnsafeQueue"]
+        ),
+        .library(
+            name: "UnsafeStack",
+            targets: ["UnsafeStack"]
+        ),
+        
+        // The library of all modules.
         .library(
             name: "UnsafeCollections",
-            targets: ["UnsafeCollections"]),
+            targets: [
+                "UnsafeTree",
+                "UnsafeList",
+                "UnsafeQueue",
+                "UnsafeStack"
+            ]
+        ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        // Core Module.
         .target(
-            name: "UnsafeCollections"),
+            name: "UnsafeCollectionsCore",
+            dependencies: [],
+            path: "Core/UnsafeCollectionsCore"
+        ),
+        
+        // UnsafeTree Module.
+        .target(
+            name: "UnsafeTree",
+            dependencies: ["UnsafeCollectionsCore"]
+        ),
+        .testTarget(
+            name: "UnsafeTreeTests",
+            dependencies: ["UnsafeTree"]
+        ),
+        
+        // UnsafeList Module.
+        .target(
+            name: "UnsafeList",
+            dependencies: ["UnsafeCollectionsCore"]
+        ),
+        .testTarget(
+            name: "UnsafeListTests",
+            dependencies: ["UnsafeList"]
+        ),
+        
+        // UnsafeQueue Module.
+        .target(
+            name: "UnsafeQueue",
+            dependencies: ["UnsafeCollectionsCore"]
+        ),
+        .testTarget(
+            name: "UnsafeQueueTests",
+            dependencies: ["UnsafeQueue"]
+        ),
 
+        // UnsafeStack Module.
+        .target(
+            name: "UnsafeStack",
+            dependencies: ["UnsafeCollectionsCore"]
+        ),
+        .testTarget(
+            name: "UnsafeStackTests",
+            dependencies: ["UnsafeStack"]
+        ),
     ]
 )
+

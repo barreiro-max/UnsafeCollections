@@ -1,8 +1,29 @@
-.DS_Store
-/.build
-/Packages
-xcuserdata/
+# Xcode
+*.xcworkspace
+*.xcuserdata
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/xcshareddata/WorkspaceSettings.xcsettings
+
+# Build artifacts
+.build/
 DerivedData/
-.swiftpm/configuration/registries.json
-.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
-.netrc
+*.o
+*.swp
+*.lock
+
+# Swift Package Manager
+Packages/
+.swiftpm/
+.build/
+
+# Scheme files (если не хотите коммитить кастомные схемы)
+*.xcscheme
+xcshareddata/
+
+# Temporary files
+*.DS_Store
+*.tmp
+*.swp
+*~.nib
+*~.storyboardc
