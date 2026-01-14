@@ -1,4 +1,4 @@
-import UnsafeCollectionsCore
+@_exported import UnsafeCollectionsCore
 
 /// A binary search tree implemented using unsafe memory operations.
 ///

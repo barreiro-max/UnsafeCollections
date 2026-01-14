@@ -27,15 +27,22 @@ let package = Package(
         // The library of all modules.
         .library(
             name: "UnsafeCollections",
-            targets: [
-                "UnsafeTree",
-                "UnsafeList",
-                "UnsafeQueue",
-                "UnsafeStack"
-            ]
+            targets: ["UnsafeCollections"]
         ),
     ],
     targets: [
+        
+        // MARK: - Main target that allows importing UnsafeCollections as a single module.
+        .target(
+            name: "UnsafeCollections",
+            dependencies: [
+                "UnsafeTree",
+                "UnsafeList",
+                "UnsafeQueue",
+                "UnsafeStack",
+            ]
+        ),
+        
         // Core Module.
         .target(
             name: "UnsafeCollectionsCore",

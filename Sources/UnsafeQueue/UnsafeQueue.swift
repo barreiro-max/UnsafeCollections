@@ -1,4 +1,4 @@
-import UnsafeCollectionsCore
+@_exported import UnsafeCollectionsCore
 
 /// A queue data structure implemented as a singly-linked list using unsafe memory operations.
 ///

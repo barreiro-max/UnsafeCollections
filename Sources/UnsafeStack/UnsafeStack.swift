@@ -1,4 +1,4 @@
-import UnsafeCollectionsCore
+@_exported import UnsafeCollectionsCore
 
 /// A stack data structure implemented as a singly-linked list using unsafe memory operations.
 ///

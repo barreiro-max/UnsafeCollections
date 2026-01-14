@@ -1,4 +1,4 @@
-import UnsafeCollectionsCore
+@_exported import UnsafeCollectionsCore
 
 /// A Doubly Circular Linked List that uses unsafe memory operations.
 ///
