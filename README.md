@@ -59,7 +59,7 @@ Each data structure:
 2. Go to File → Add Packages… and paste this URL:
 
 ```
-https://github.com/BarreiroFontelaMax/UnsafeCollections.git
+https://github.com/barreiro-max/UnsafeCollections.git
 ```
 
 Click Next.
